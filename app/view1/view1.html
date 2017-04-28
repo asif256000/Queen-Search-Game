@@ -1,0 +1,75 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <select class="form-control" ng-model="destinyOne" ng-change="getModifiedPlanetList(destinyOne);getSpaceShipList()">
+                        <option value="" selected>Planet</option>
+                        <option ng-repeat="planet in planetList" value="{{planet}}">{{planet.name}}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li class="radio" ng-repeat="spaceShip in spaceShipList">
+                            <label><input type="radio" name="optradio" ng-click="calculateTotalTime(spaceShip)">{{spaceShip.name}}({{spaceShip.total_no}})</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <select class="form-control" ng-model="destinyTwo" ng-change="getModifiedPlanetList(destinyTwo);getSpaceShipList()">
+                        <option value="" selected>Planet</option>
+                        <option ng-repeat="planet in planetList" value="{{planet}}">{{planet.name}}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li class="radio" ng-repeat="spaceShip in spaceShipList">
+                            <label><input type="radio" name="optradio" ng-click="calculateTotalTime(spaceShip)">{{spaceShip.name}}({{spaceShip.total_no}})</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <select class="form-control" ng-model="destinyThree" ng-change="getModifiedPlanetList(destinyThree);getSpaceShipList()">
+                        <option value="" selected>Planet</option>
+                        <option ng-repeat="planet in planetList" value="{{planet}}">{{planet.name}}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li class="radio" ng-repeat="spaceShip in spaceShipList">
+                            <label><input type="radio" name="optradio" ng-click="calculateTotalTime(spaceShip)">{{spaceShip.name}}({{spaceShip.total_no}})</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <select class="form-control" ng-model="destinyFour" ng-change="getModifiedPlanetList(destinyFour);getSpaceShipList()">
+                        <option value="" selected>Planet</option>
+                        <option ng-repeat="planet in planetList" value="{{planet}}">{{planet.name}}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li class="radio" ng-repeat="spaceShip in spaceShipList">
+                            <label><input type="radio" name="optradio" ng-click="calculateTotalTime(spaceShip)">{{spaceShip.name}}({{spaceShip.total_no}})</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Time:</h1>
+                <span ng-bind="totalTime"></span>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-secondary">Find Falcon</button>
+            </div>
+        </div>
+    </div>
+</body>
